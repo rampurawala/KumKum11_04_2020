@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activity.PracticeTestQAActivity">
+
+    <LinearLayout
+        android:id="@+id/empty_practiceTestBtm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_knowledge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No Test Found"
+            android:textColor="#A8A8A8"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/frame_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pg_QA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_test"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/reviewLayout"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/queinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightgray">
+
+                    <RelativeLayout
+                        android:layout_marginBottom="5dp"
+                        android:id="@+id/queCount"
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/countdivider"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_toLeftOf="@+id/countdivider"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:fontFamily="monospace"
+                                android:id="@+id/tvTotalCount"
+                                android:layout_width="wrap_content"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="Total :"
+                                android:textColor="@color/year" />
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/countdivider"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/attempCard"
+                            app:cardCornerRadius="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
+                        <TextView
+                            android:fontFamily="monospace"
+                            android:id="@+id/tvAttemptCount"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="Attempt : "
+                            android:textColor="@color/btnmorebgHover" />
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="3dp"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_below="@+id/attempCard"
+                            app:cardCornerRadius="5dp"
+                            android:visibility="visible"
+                            android:layout_marginBottom="3dp"
+                            android:layout_toRightOf="@+id/countdivider"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
+                        <TextView
+                            android:id="@+id/tvSkipCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="monospace"
+                            android:layout_marginLeft="3dp"
+                            android:text="Skipped : "
+                            android:textColor="@color/header_bg" />
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_below="@+id/attempCard"
+                            android:layout_toLeftOf="@+id/countdivider"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="match_parent">
+                        <TextView
+                            android:id="@+id/tvRemainingCount"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="Remaining :"
+                            android:fontFamily="monospace"
+                            android:textColor="@color/orange_calander_day" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/endLyt"
+                        android:layout_below="@+id/queCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvendTimeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="End Time:"
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/tvEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="12:00"
+                            android:textColor="@color/blue" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/timeLyt"
+                        android:layout_below="@+id/queCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvTest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="Time Remaining : "
+                            android:textColor="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/tvTestTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="12:00"
+                            android:textColor="#F9A825" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/text_ques"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.github.florent37.shapeofview.shapes.ArcView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="4dp"
+                        app:shape_arc_cropDirection="outside"
+                        app:shape_arc_height="20dp"
+                        app:shape_arc_position="bottom">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary">
+
+                            <TextView
+                                android:id="@+id/ques"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="40dp"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                           <!-- <LinearLayout
+                                android:id="@+id/timeLyt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center|bottom"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:visibility="visible">-->
+<!--
+
+                                <TextView
+                                    android:id="@+id/tvTest"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Time Remaining : "
+                                    android:textColor="@color/colorPrimary" />
+-->
+                            <!--</LinearLayout>-->
+                        </FrameLayout>
+                    </com.github.florent37.shapeofview.shapes.ArcView>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_img_ques"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ques_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text=""
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/img_ques"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:adjustViewBounds="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/placeholder" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="60dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/back_opt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/option_no_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_opt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/placeholder" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/opt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:id="@+id/back_opt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/option_no_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_opt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/placeholder" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/opt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:id="@+id/back_opt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/option_no_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_opt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/placeholder" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/opt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:id="@+id/back_opt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/option_no_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_opt4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/placeholder" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/opt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/quiz_opt"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/correctAns"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ans_img_opt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:id="@+id/img_CorrectAns"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:adjustViewBounds="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/reviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/skipLyt"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/strut"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/strut"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/btn_practicetest_click"
+                android:text="Previous"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/strut"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_practicetest_click"
+                android:text="Next"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/skipLyt"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_next"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/attendancebg" />
+
+            <Button
+                android:id="@+id/skipprevious"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/divider"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/btn_practicetestprevious_click"
+                android:text="Previous"
+                android:textColor="@color/colorPrimarybg"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/skip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/divider"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_practicetestskip_click"
+                android:text="Skip"
+                android:visibility="visible"
+                android:textColor="@color/colorPrimarybg" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/advertiseView"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_practicetest_click"
+            android:text="Next"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/advertiseView"
+            layout="@layout/advertise_banner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout><!--
+    android:layout_marginTop="15dp"-->

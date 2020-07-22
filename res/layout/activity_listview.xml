@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical"
+    app:cardCornerRadius="2dp"
+    android:layout_margin="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/list_row_selector">
+
+        <com.expedite.apps.kumkum.common.ExpandableTextView
+            android:id="@+id/txt_messages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:autoLink="web"
+            android:lineSpacingExtra="2.3dp"
+            android:textColor="@color/textbg"
+            android:textSize="@dimen/txt_size_sixteen" />
+
+        <TextView
+            android:id="@+id/txtlessonmessages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_messages"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/textbg"
+            android:textSize="@dimen/txt_size_sixteen"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtmessagesdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txtlessonmessages"
+            android:text=""
+            android:textColor="@color/textbg"
+            android:textSize="@dimen/txt_size_forteen" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

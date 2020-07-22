@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/empty_examListMarksheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_folder_open_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Empty"
+            android:textColor="#A8A8A8"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/main_examListMarksheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llMainLayout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exam Category"
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_sixteen"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/fl_category"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/spinner_rounded_bg"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spnCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/down_arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/llSelectall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/White">
+
+                <TextView
+                    android:id="@+id/txtCircularName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:text="Select All"
+                    android:textColor="@color/bolgque"
+                    android:textSize="@dimen/txt_size_eighteen" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxselectall"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:text=""
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/llMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/advertiseView"
+        android:background="@color/White"
+        android:orientation="vertical"
+        app:cardCornerRadius="3dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtexamnote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Note:To Get Latest Exams press Refresh option from Menu."
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_sixteen" />
+
+            <TextView
+                android:id="@+id/tvmarkqueetextexamlistmarksheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:lines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:text="Last Updated Time:31 Juanuary"
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_sixteen" />
+
+            <Button
+                android:id="@+id/downloadbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Download"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

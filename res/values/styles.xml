@@ -1,0 +1,177 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <!-- Application theme. -->
+    <style name="AppTheme"  parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkbg</item>
+        <item name="colorAccent">@color/textbg</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="android:windowBackground">@color/White</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+
+    <style name="MaterialDialog.PositiveButton_without_margin" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="backgroundTint">?android:attr/colorAccent</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="OverflowMenu" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="customtheme" parent="@android:style/Theme.Light">
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+
+    <style name="SpinnerItem">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18dp</item>
+        <!-- <item name="android:background">@drawable/xml_textbox_bg</item>-->
+    </style>
+
+    <style name="SpinnerDropDownItem">
+        <item name="android:textColor">#000000</item>
+        <item name="android:gravity">left</item>
+        <item name="android:height">40dp</item>
+        <item name="android:layout_below">@+id/menu</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:background">@drawable/xml_textbox_bg</item>
+    </style>
+
+    <!--<style name="calendar_event_style" parent="@android:style/TextAppearance.Small">-->
+        <!--<item name="android:textColor">#FFFFFF</item>-->
+        <!--<item name="android:textStyle">bold</item>-->
+        <!--<item name="android:textSize">10sp</item>-->
+    <!--</style>-->
+
+
+    <style name="AppThemeSplash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimarybg</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkbg</item>
+        <item name="colorAccent">@color/textbg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--<item name="android:windowDisablePreview">true</item>-->
+        <!--android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"-->
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyCustomTheme" >
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+    </style>
+
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/animin</item>
+        <item name="android:windowExitAnimation">@anim/animout</item>
+    </style>
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/popup_background</item>
+    </style>
+  <!--  <style name="CustomDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>-->
+    <!--<style name="AppTheme.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="actionOverflowMenuStyle">@style/OverflowMenu</item>-->
+    <!--</style>-->
+
+
+    <!--<style name="AppBaseTheme" parent="android:Theme.Light">-->
+    <!--<item name="android:windowBackground">@color/White</item>-->
+    <!--<item name="android:textColor">#000</item>-->
+    <!--</style>-->
+
+    <!--<style name="EditText" parent="@android:style/TextAppearance.Medium">-->
+    <!--<item name="android:textColor">#000</item>-->
+    <!--</style>-->
+
+    <!--<style name="MyTheme" parent="android:Theme.Holo.Dialog" tools:targetApi="honeycomb">-->
+    <!--<item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>-->
+    <!--<item name="android:windowBackground">@color/transparent</item>-->
+    <!--<item name="android:textColorPrimary">#FFFFFF</item>-->
+    <!--<item name="android:backgroundDimEnabled">false</item>-->
+    <!--<item name="android:textColor">#FFFFFF</item>-->
+    <!--<item name="android:textStyle">normal</item>-->
+    <!--<item name="android:textSize">12sp</item>-->
+    <!--</style>-->
+
+    <!--<style name="CustomAlertDialogStyle">-->
+    <!--<item name="android:bottomBright">@color/transparent</item>-->
+    <!--<item name="android:bottomDark">@color/transparent</item>-->
+    <!--<item name="android:bottomMedium">@color/transparent</item>-->
+    <!--<item name="android:centerBright">@color/transparent</item>-->
+    <!--<item name="android:centerDark">@color/transparent</item>-->
+    <!--<item name="android:centerMedium">@color/transparent</item>-->
+    <!--<item name="android:fullBright">@color/transparent</item>-->
+    <!--<item name="android:fullDark">@color/transparent</item>-->
+    <!--<item name="android:topBright">@color/transparent</item>-->
+    <!--<item name="android:topDark">@color/transparent</item>-->
+    <!--</style>-->
+
+
+    <!--<style name="Button">-->
+    <!--<item name="android:background">#E25800</item>-->
+    <!--<item name="android:textColor">#fff</item>-->
+    <!--</style>-->
+
+    <!--<style name="SettingCodeFontBold" parent="@android:style/TextAppearance.Medium">-->
+    <!--<item name="android:layout_width">fill_parent</item>-->
+    <!--<item name="android:layout_height">wrap_content</item>-->
+    <!--<item name="android:textColor">#000000</item>-->
+    <!--<item name="android:typeface">monospace</item>-->
+    <!--</style>-->
+
+    <!--<style name="SettingCodeFont" parent="@android:style/TextAppearance.Medium">-->
+    <!--<item name="android:layout_width">fill_parent</item>-->
+    <!--<item name="android:layout_height">wrap_content</item>-->
+    <!--<item name="android:textColor">#005584</item>-->
+    <!--<item name="android:typeface">monospace</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+    <!--<style name="myImageView">-->
+    <!--&lt;!&ndash; 3dp so the background border to be visible &ndash;&gt;-->
+    <!--&lt;!&ndash;  <item name="android:padding">3dp</item>-->
+    <!--<item name="android:background">@drawable/image_borde</item>&ndash;&gt;-->
+    <!--<item name="android:scaleType">fitCenter</item>-->
+    <!--</style>-->
+    <!--&lt;!&ndash; for calander &ndash;&gt;-->
+
+    <!--<style name="RelativeLayout" parent="@android:style/TextAppearance.Small">-->
+    <!--<item name="android:background">@color/White</item>-->
+    <!--<item name="android:textStyle">bold</item>-->
+    <!--<item name="android:textSize">8sp</item>-->
+    <!--</style>-->
+
+    <style name="appCompatDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimaryDarkbg</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkbg</item>
+        <item name="colorAccent">@color/colorPrimaryDarkbg</item>
+    </style>
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTextAppearance</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

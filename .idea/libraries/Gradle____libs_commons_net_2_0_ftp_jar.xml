@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./libs/commons-net-2.0-ftp.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/commons-net-2.0-ftp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <LIBRARY_FILE />
+    <LIBRARY_FILE />
+    <SOURCES />
+  </library>
+</component>

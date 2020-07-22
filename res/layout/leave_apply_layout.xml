@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSave"
+        android:layout_alignParentTop="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Application Date"
+                android:textColor="@color/viewname"
+                android:textSize="@dimen/txt_size_forteen"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llmain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="From :"
+                        android:textColor="@color/textbg"
+                        android:textSize="@dimen/txt_size_forteen" />
+
+                    <RelativeLayout
+                        android:id="@+id/llDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_corner_textbox_bg"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/calenderimg"
+                            android:layout_toStartOf="@+id/calenderimg"
+                            android:text="Select Date"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_forteen" />
+
+                        <ImageView
+                            android:id="@+id/calenderimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:clickable="false"
+                            android:contentDescription="@string/app_name"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            app:srcCompat="@drawable/calendar_icon" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To :"
+                        android:textColor="@color/textbg"
+                        android:textSize="@dimen/txt_size_forteen" />
+
+                    <RelativeLayout
+                        android:id="@+id/llEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_corner_textbox_bg"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtEndDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/calenderimg1"
+                            android:layout_toStartOf="@+id/calenderimg1"
+                            android:text="Select Date"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_forteen" />
+
+                        <ImageView
+                            android:id="@+id/calenderimg1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:clickable="false"
+                            android:contentDescription="@string/app_name"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            app:srcCompat="@drawable/calendar_icon" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:padding="10dp"
+                android:text="Apply For Half Day"
+                android:textColor="@color/textbg"
+                android:visibility="gone"
+                android:textSize="@dimen/txt_size_forteen" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Leave Type :"
+                android:textColor="@color/viewname"
+                android:textSize="@dimen/txt_size_forteen"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/fl_category"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/spinner_rounded_bg"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spnLeaveType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/down_arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Reason :"
+                android:textColor="@color/viewname"
+                android:textSize="@dimen/txt_size_forteen"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/edt_bg_new"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:hint="Please enter your reason detail here"
+                android:inputType="textMultiLine|textCapWords"
+                android:lines="5"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/txt_size_forteen" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Attached File :"
+                    android:textColor="@color/viewname"
+                    android:textSize="@dimen/txt_size_forteen"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnBrowse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:text="Browse"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_forteen"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/txtSelectedPath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/remove"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:gravity="start"
+                    android:text=""
+
+                    android:layout_marginRight="25dp"
+                    android:textColor="@color/viewname"
+                    android:textSize="@dimen/txt_size_twelve"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_delete_forever_black_24dp" />
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/imgview"/>
+            <!--<TextView
+                android:id="@+id/txtSelectedPath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="@color/viewname"
+                android:textSize="@dimen/txt_size_twelve"
+                android:visibility="gone" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/advertiseView"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/txt_size_eighteen" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+</RelativeLayout>

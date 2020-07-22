@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.TakeAppointmentActivity">
+
+
+    <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/framePhoto"
+            android:layout_height="150dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/back_appoint_scene">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/text_ques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                &lt;!&ndash; <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:background="@drawable/circle_img"
+                     android:padding="3dp">
+
+                     <ImageView
+                         android:id="@+id/profileImage"
+                         android:layout_width="90dp"
+                         android:layout_height="90dp"
+                         android:layout_gravity="center"
+                         android:background="@drawable/appointment_image_bg"
+                         android:clickable="false"
+                         android:contentDescription="@string/app_name"
+                         android:scaleType="fitXY"
+                         app:srcCompat="@drawable/default_person" />
+
+                 </LinearLayout>&ndash;&gt;
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/user_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/default_person"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp"
+                    app:civ_circle_background_color="@color/Black" />
+
+              &lt;!&ndash;  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />&ndash;&gt;
+                &lt;!&ndash;<com.github.florent37.shapeofview.shapes.ArcView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:elevation="4dp"
+                app:shape_arc_cropDirection="outside"
+                app:shape_arc_height="20dp"
+                app:shape_arc_position="bottom">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorevent">
+
+                    <TextView
+                        android:id="@+id/ques"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="40dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </FrameLayout>
+            </com.github.florent37.shapeofview.shapes.ArcView>&ndash;&gt;
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    -->
+    <ScrollView
+        android:id="@+id/scroll_takeAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_takeAppointment"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_edt_number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                android:layout_margin="10dp"
+                android:fontFamily="serif"
+                android:hint="Mobile Number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_mobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custome_edit_text"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDarkbg"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_edt_pin"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:hint="Enter Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDarkbg"
+                    android:textColorHint="@color/colorPrimary"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/input_mobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custome_edit_text"
+                    android:hint="Enter Mobile No."
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDarkbg"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Name"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDarkbg"
+                    android:textColorHint="@color/colorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Guardian"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:id="@+id/fl_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_toEndOf="@+id/txtTitle"
+                    android:layout_toRightOf="@+id/txtTitle"
+                    android:background="@drawable/round_corner_textbox_bg"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spnGuardian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@null"
+                        android:textCursorDrawable="@null" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        app:srcCompat="@drawable/down_arrow"
+                        android:contentDescription="@string/app_name" />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/txtHost"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Host"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:id="@+id/f2_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_toEndOf="@+id/txtHost"
+                    android:layout_toRightOf="@+id/txtHost"
+                    android:background="@drawable/round_corner_textbox_bg"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spnHost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@null"
+                        android:textAlignment="center"
+                        android:textCursorDrawable="@null" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        app:srcCompat="@drawable/down_arrow"
+                        android:contentDescription="@string/app_name" />
+                </FrameLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="Date"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/spinner_rounded_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/dateSelected"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="left"
+                        android:hint="Select date"
+                        android:textColor="@color/colorPrimaryDarkbg"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/datePicker"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/calendaricon" />
+
+                    <!--     <View
+                             android:layout_width="match_parent"
+                             android:layout_height="1dp"
+                             android:layout_marginTop="40dp"
+                             android:background="@color/viewname" />-->
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/timeLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/txtSelectTime"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Select Time"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <FrameLayout
+                    android:id="@+id/f3_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_toEndOf="@+id/txtSelectTime"
+                    android:layout_toRightOf="@+id/txtSelectTime"
+                    android:background="@drawable/round_corner_textbox_bg"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spnSelectTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@null"
+                        android:textAlignment="center"
+                        android:textCursorDrawable="@null" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        app:srcCompat="@drawable/down_arrow"
+                        android:contentDescription="@string/app_name" />
+                </FrameLayout>
+
+            </RelativeLayout>
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/spinner_rounded_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/timeSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="left"
+                    android:hint="Select Time"
+                    android:textColor="@color/colorPrimaryDarkbg"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/timePicker"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/time_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/viewname" />
+            </RelativeLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_visitPurpose"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/visitPurpose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Purpose of Visit"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDarkbg"
+                    android:textColorHint="@color/colorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relative_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/prg_takeAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_takeAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/advertiseView"
+        android:background="@color/colorPrimaryDarkbg"
+        android:text="Take Appointment"
+        android:textColor="@color/white" />
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_card_payment_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textviewmode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e5e5e5"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Select Payment Mode"
+            android:textColor="@color/textbg"
+            android:textSize="@dimen/txt_size_eighteen"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout4"
+            android:layout_below="@+id/textviewmode">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CVPaymentGetway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:visibility="gone"
+                    app:cardCornerRadius="3dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RadioGroup
+                        android:id="@+id/RGGetway"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/rbAtom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="Atom"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/rbPaynimo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="Paynimo"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/rbEasyPay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="EasyPay"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:visibility="gone" />
+                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/white"
+                    android:visibility="gone"
+                    app:cardCornerRadius="3dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RadioGroup
+                        android:id="@+id/cardtypeRG"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/dc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:text="DEBIT CARD"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen" />
+
+                        <RadioButton
+                            android:id="@+id/cc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:text="CREDIT CARD"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen" />
+
+                        <RadioButton
+                            android:id="@+id/nb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:checked="false"
+                            android:text="NET BANKING"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:visibility="gone" />
+                        <!--remove visibility gone for enable netbankign.-->
+                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardnetbankingtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/linearLayout4"
+                    android:layout_alignStart="@+id/linearLayout4"
+                    android:layout_marginTop="8dp"
+                    android:padding="10dp"
+                     android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/banktext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         android:text="Please select your Bank."
+                        android:textColor="@color/textbg"
+                        android:textSize="@dimen/txt_size_sixteen" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardnetbanking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/linearLayout4"
+                    android:layout_alignStart="@+id/linearLayout4"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinnerbnk"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardassociatetype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardtype"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/white"
+                    android:visibility="gone"
+                    app:cardCornerRadius="3dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:id="@+id/rlCardType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Please select appropriate card type."
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen" />
+
+                        <RadioGroup
+                            android:id="@+id/cardAssociatetypeRG"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text">
+
+                            <RadioButton
+                                android:id="@+id/visarb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="VISA"
+                                android:textColor="@color/textbg"
+                                android:textSize="@dimen/txt_size_sixteen" />
+
+                            <RadioButton
+                                android:id="@+id/masterrb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="MASTER"
+                                android:textColor="@color/textbg"
+                                android:textSize="@dimen/txt_size_sixteen" />
+
+                            <RadioButton
+                                android:id="@+id/maestrorb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="MAESTRO"
+                                android:textColor="@color/textbg"
+                                android:textSize="@dimen/txt_size_sixteen" />
+                            <RadioButton
+                                android:id="@+id/rupay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text=""
+                                android:textColor="@color/textbg"
+                                android:textSize="@dimen/txt_size_sixteen" />
+
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+      <!--  <TextView
+            android:id="@+id/Continuepay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:drawableRight="@drawable/arrow_right_xml"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Continue"
+            android:textColor="@android:color/white" />
+-->
+        <TextView
+            android:id="@+id/Continuepay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Continue"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+
+            android:padding="5dp"
+            app:srcCompat="@drawable/arrow_right_xml" />
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Continuepay"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:srcCompat="@drawable/icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvnote1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="You will be redirected to our payment partners site for Safe &amp; Secure transction."
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_forteen" />
+
+                <TextView
+                    android:id="@+id/tvnote2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:text="We do not store your card information."
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_forteen" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:textColor="@color/textbg"
+            android:textSize="@dimen/txt_size_eighteen">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/edittxtlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Pin"
+            android:inputType="textPassword|number"
+            android:password="true"
+            android:textColor="@color/textbg"
+            android:textSize="@dimen/txt_size_eighteen" />
+
+
+        <LinearLayout
+            android:id="@+id/layoutlenear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/imgbtnaddaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorPrimaryDarkbg"
+                android:padding="10dp"
+                android:text="Add account"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_size_sixteen" />
+
+            <TextView
+                android:id="@+id/imgbtncancelaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorPrimaryDarkbg"
+                android:padding="10dp"
+                android:text="Cancel"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_size_sixteen" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <include
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:id="@+id/advertiseLayout"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

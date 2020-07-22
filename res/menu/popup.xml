@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/action_changepin"
+    app:showAsAction="never"
+    android:title="Change Pin"
+    android:visible="false"/>
+<item
+    android:id="@+id/action_add_account"
+    app:showAsAction="never"
+    android:title="Add Account"/>
+<item
+    android:id="@+id/action_remove_account"
+    app:showAsAction="never"
+    android:title="Remove Account"
+    android:visible="false"/>
+<item
+    android:id="@+id/action_set_default_account"
+    app:showAsAction="never"
+    android:title="Set Default Account"/>
+<item
+    android:id="@+id/action_set_default_year"
+    app:showAsAction="never"
+    android:title="Set Default Year"/>
+<item
+    android:id="@+id/action_appFeedback"
+    app:showAsAction="never"
+    android:title="App Feedback"/>
+<item
+    android:id="@+id/action_about"
+    app:showAsAction="never"
+    android:title="About"/>
+<item
+    android:id="@+id/action_exit"
+    app:showAsAction="never"
+    android:title="Exit"/>
+</menu>

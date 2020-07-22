@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutlenear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lstMultiUserList"
+        android:layout_width="match_parent"
+        android:layout_height="444dp" 
+        android:cacheColorHint="@color/winbacknil"
+        android:choiceMode="singleChoice">
+    </ListView>
+    
+    <TextView
+        android:id="@+id/tvmarkqueetextlist"
+        android:layout_width="300dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Last Updated Time:31 Juanuary" />
+
+</LinearLayout>

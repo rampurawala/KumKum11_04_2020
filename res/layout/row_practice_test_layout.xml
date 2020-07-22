@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardTest"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/test_selector"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/innerLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/testName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/status"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="5dp"
+                        android:text=""
+                        android:textSize="@dimen/txt_size_eighteen"
+                        android:visibility="visible" />
+
+                  <!--  <TextView
+                        android:id="@+id/msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/status"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+
+                        android:text="3"
+
+                        android:textColor="@color/txt_green_bg"
+                        android:visibility="visible" />-->
+                    <!--    <LinearLayout
+                            android:id="@+id/marksLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/testName"
+                            android:gravity="right"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                <LinearLayout
+                                    android:id="@+id/marks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/get"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="3"
+                                        android:textColor="@color/txt_green_bg" />
+
+                                    <View
+                                        android:layout_width="10dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/txt_green_bg"></View>
+
+                                    <TextView
+                                        android:id="@+id/outOf"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="3" />
+                                </LinearLayout>
+                                    <TextView
+                                        android:layout_marginLeft="3dp"
+                                        android:id="@+id/msg_marks"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="msg" />
+                                </LinearLayout>
+                            </FrameLayout>
+                        </LinearLayout>-->
+
+                    <!--     <LinearLayout
+                             android:id="@+id/msgLayout"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentEnd="true"
+                             android:layout_centerInParent="true"
+                             android:layout_marginRight="5dp"
+                             android:layout_toRightOf="@+id/testName"
+                             android:gravity="right"
+                             android:orientation="vertical"
+                             android:visibility="visible">
+
+                             <FrameLayout
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content">
+
+                                 <LinearLayout
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_marginRight="5dp"
+                                     android:orientation="vertical">
+
+                                     <TextView
+                                         android:id="@+id/msg"
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:layout_gravity="center"
+                                         android:text="3"
+                                         android:textColor="@color/txt_green_bg" />
+                                 </LinearLayout>
+                             </FrameLayout>
+                         </LinearLayout>-->
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/testName"
+                        android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"
+                        android:text="status"
+                        android:textColor="@color/colorPrimaryDarkbg"
+                        android:textSize="8sp"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        android:visibility="gone"
+                        app:chipBackgroundColor="@color/material_green"
+                        app:rippleColor="@android:color/transparent"
+                        app:singleLine="true" />
+                    <!--   <TextView
+                           android:id="@+id/status"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@+id/testName"
+                           android:layout_alignParentRight="true"
+                           android:layout_marginTop="3dp"
+                           android:background="@drawable/practice_test_half_done"
+                           android:gravity="center"
+                           android:padding="5dp"
+                           android:text="status"
+                           android:textColor="#37474F"
+                           android:visibility="gone" />-->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/startTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:text="Start time : 11:00 AM"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/endTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/startTime"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:padding="3dp"
+                    android:text="End time : 11:30 AM"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/uploadData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/practice_test_half_done"
+                    android:padding="5dp"
+                    android:text="Upload Data"
+                    android:textColor="#37474F"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/innerLyt"
+                android:layout_marginRight="10dp"
+                android:text="3"
+                android:textColor="@color/txt_green_bg"
+                android:visibility="visible" />
+            <com.expedite.apps.kumkum.common.CustomProgressBar
+                android:id="@+id/progressCompleted"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_below="@+id/msg"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@android:color/transparent"
+                android:visibility="gone" />
+            <!-- <com.google.android.material.chip.Chip
+                 android:id="@+id/uploadData"
+                 android:layout_below="@+id/rl"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="status"
+                 app:rippleColor="@android:color/transparent"
+                 android:textColor="@color/colorPrimaryDarkbg"
+                 android:textSize="8sp"
+                 android:layout_alignParentRight="true"
+                 android:visibility="gone"
+                 android:gravity="center"
+                 app:chipBackgroundColor="@color/material_green"
+                 android:theme="@style/Theme.MaterialComponents.Light"
+                 app:singleLine="true" />-->
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

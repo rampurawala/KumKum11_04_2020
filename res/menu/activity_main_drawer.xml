@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Attendance" />
+        <item
+            android:id="@+id/nav_events"
+            android:title="Notice Board" />
+        <item
+            android:id="@+id/nav_myevents"
+            android:title="Messages" />
+        <item
+            android:id="@+id/nav_manageevents"
+            android:title="Daily Diary" />
+        <item
+            android:id="@+id/nav_findpeople"
+            android:title="Exam" />
+        <item
+            android:id="@+id/nav_findevent"
+            android:title="Fees" />
+        <item
+            android:id="@+id/nav_userprofile"
+            android:title="Photo Gallery" />
+
+        <item
+            android:id="@+id/nav_login"
+            android:title="Send Query" />
+    </group>
+</menu>

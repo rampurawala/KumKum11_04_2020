@@ -1,0 +1,74 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SplashActivity">
+
+    <item
+        android:id="@+id/Menu_Stud_profile"
+        android:icon="@drawable/setting0"
+        android:title="Profile"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/Setting"
+        android:title="Setting"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_changepin"
+        android:orderInCategory="101"
+        android:title="Change Pin"
+        app:showAsAction="never"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_add_account"
+        android:orderInCategory="101"
+        android:title="Add Account"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_remove_account"
+        android:orderInCategory="101"
+        android:title="Remove Account"
+        app:showAsAction="never"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_set_default_account"
+        android:orderInCategory="101"
+        android:title="Set Default Account"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_set_default_year"
+        android:orderInCategory="101"
+        android:title="Set Default Year"
+        app:showAsAction="never" />
+    <!--    <item
+           android:id="@+id/action_appFeedback"
+            app:showAsAction="never"
+           android:title="App Feedback"/>-->
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="101"
+        android:title="About"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="101"
+        android:title="Exit"
+        app:showAsAction="never" />
+
+
+    <!--
+    <item
+        android:id="@+id/Menu_Stud_profile"
+        android:icon="@drawable/setting0"
+        android:showAsAction="ifRoom"
+        android:title="Profile"/>
+    
+	<item
+        android:id="@+id/Menu_Stud_profile1"
+        android:icon="@drawable/setting1"
+        android:showAsAction="ifRoom"
+        android:title="Profile2"/>
+    -->
+
+</menu>

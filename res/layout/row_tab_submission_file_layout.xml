@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:checked="false"
+            android:gravity="center_vertical"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/mainUpperLyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+         <!--   <LinearLayout
+                android:id="@+id/upPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+-->
+                <LinearLayout
+                    android:id="@+id/upPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  >
+                    <TextView
+                        android:id="@+id/dateTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textColor="@color/textbg" />
+                </LinearLayout>
+
+               <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/timeTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/textbg" />
+                </LinearLayout>
+            </LinearLayout>-->
+
+                <TextView
+                    android:layout_below="@+id/upPanel"
+                    android:id="@+id/subName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDarkbg"
+                    android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/nameLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subName">
+
+                <RelativeLayout
+                    android:id="@+id/imgLyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/imgfile"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/file1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shareLyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/shareFile"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="@string/app_name"
+                        app:srcCompat="@drawable/ic_share_black_other" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/fileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toLeftOf="@+id/shareLyt"
+                    android:layout_toRightOf="@+id/imgLyt"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="Atoms and Molecules"
+                    android:textColor="@color/headertextbg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fileIns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fileName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toLeftOf="@+id/shareLyt"
+                    android:layout_toRightOf="@+id/imgLyt"
+                    android:gravity="center"
+                    android:text="Instruction"
+                    android:textColor="@color/header_bg1"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/downUploadLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameLyt"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/imgDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner_btn_bg_download"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/download"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/downloadimg"
+                        android:text="Download"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/downloadimg"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        app:srcCompat="@drawable/download_arrow" />
+                </RelativeLayout>
+                <!--app:icon="@drawable/download_arrow_new"
+                app:iconGravity="end"
+                app:iconSize="@dimen/txt_size_twelve"-->
+                <RelativeLayout
+                    android:id="@+id/imgComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner_btn_bg_upload"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/complete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imgShare"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/green"
+                        android:text="UPLOAD"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/imgShare"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        app:srcCompat="@drawable/ic_done_black_24dp_temp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.expedite.apps.kumkum.common.CustomProgressBar
+                android:id="@+id/progressSeek"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/downUploadLyt"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@android:color/transparent"
+                android:visibility="gone" />
+        </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

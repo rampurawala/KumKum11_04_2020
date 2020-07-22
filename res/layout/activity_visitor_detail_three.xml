@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtSubmit"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llTotalVisitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Visitors"
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_sixteen"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/fl_visitors"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/spinner_rounded_bg"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/edtTotalVisitors"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:textColor="@color/viewname"
+                        android:textSize="@dimen/txt_size_forteen" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extra Visitors"
+                    android:gravity="start"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_sixteen"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/addVisitor"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    app:srcCompat="@drawable/plusicon" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/LLextraVisitors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/RemarkLinearLayour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/spinner_rounded_bg"
+                            android:layout_weight="0.9"
+                            android:padding="5dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Visitor's Name"
+                                android:padding="10dp"
+                                android:text=""
+                                android:textColor="@color/viewname"
+                                android:textSize="@dimen/txt_size_forteen"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/edtMobNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mobile Number"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/viewname"
+                                android:textSize="@dimen/txt_size_forteen" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnRemoveRow"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/minusicon" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--  <android.support.v7.widget.RecyclerView
+                      android:id="@+id/extravisitorRecyclerview"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="6dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tab"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/fl_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_rounded_bg"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtTab"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:inputType="number"
+                                android:padding="5dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLaptop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="6dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Laptop"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/fl_Laptop"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_rounded_bg"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtLaptop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:inputType="number"
+                                android:padding="5dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llPendrive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="6dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pendrive"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/fl_Pendrive"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_rounded_bg"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtPendrive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:inputType="number"
+                                android:padding="5dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAnyOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="6dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Any Others"
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/fl_AnyOther"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_rounded_bg"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/edtAnyOther"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:inputType="number"
+                                android:padding="5dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/txtSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/advertiseView"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_sixteen"/>
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

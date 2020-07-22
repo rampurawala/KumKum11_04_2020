@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.learn2crack.recyclerviewsearch.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/photo_view_type"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:icon="@drawable/ic_photo_album_white_36dp"
+        android:title="View"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="101"
+        android:title="Refresh"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_add_account"
+        android:orderInCategory="101"
+        android:title="Add Account"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_remove_account"
+        android:orderInCategory="101"
+        android:title="Remove Account"
+        app:showAsAction="never"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_set_default_account"
+        android:orderInCategory="101"
+        android:title="Set Default Account"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_clear_photo"
+        android:orderInCategory="101"
+        android:title="Clear All Photo Gallery"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="101"
+        android:title="About"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        android:title="Search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+</menu>

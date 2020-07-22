@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DocumentsActivity">
+
+    <LinearLayout
+        android:id="@+id/empty_Document"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_folder_open_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Empty"
+            android:textColor="#A8A8A8"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/prgsDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/dataLyt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/llSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Select Year : "
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_sixteen"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/frame_year"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/spinner_rounded_bg"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spnYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/down_arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- <View
+             android:id="@+id/view"
+             android:layout_width="match_parent"
+             android:layout_height="0.5dp"
+             android:layout_below="@+id/llSpinner"
+             android:layout_marginTop="10dp"
+             android:background="@color/greenshade" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_Doc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llSpinner"
+            android:layout_marginTop="10dp"
+            android:overScrollMode="never"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/empty_folder_lyt_file_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_folder_open_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Empty"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

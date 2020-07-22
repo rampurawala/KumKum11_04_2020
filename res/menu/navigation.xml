@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_pending"
+        android:icon="@drawable/icons_data_pending"
+        android:title="@string/title_pending" />
+
+    <item
+        android:id="@+id/navigation_completed"
+        android:icon="@drawable/icons_task_completed"
+        android:title="@string/title_completed" />
+
+</menu>

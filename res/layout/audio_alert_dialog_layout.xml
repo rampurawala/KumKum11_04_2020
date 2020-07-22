@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/voiceMsgTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/textbg"
+                        android:textSize="@dimen/txt_size_eighteen"
+                        android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/controls_bar_pdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:background="@drawable/audio_control"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/float_play"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="play"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/play_audio" />
+
+                    <ImageView
+                        android:id="@+id/float_pause"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="pause"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/pause_icon_filled" />
+
+                    <TextView
+                        android:id="@+id/currentTime_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="00:00:00"
+                        android:textColor="#576574"
+                        android:textSize="@dimen/txt_size_eighteen" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:progressDrawable="@drawable/volume_control"
+                        android:thumb="@drawable/seek_thumb" />
+
+                    <TextView
+                        android:id="@+id/totalTime_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="00:00:00"
+                        android:textColor="#576574"
+                        android:textSize="@dimen/txt_size_eighteen" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnCancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lineview"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_eighteen"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</RelativeLayout>
+
+

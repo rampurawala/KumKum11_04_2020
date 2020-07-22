@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LessonMessagesItemListActivity" >
+    <TextView
+        android:id="@+id/txtlessonmessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/txtlessonmessagesdate"
+        android:layout_marginLeft="5dp"
+        android:text="Medium Text"
+        android:textColor="@color/TextColor_Black"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        android:typeface="normal"/>
+        
+        <TextView
+        android:id="@+id/txtlessonmessagesdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Small Text"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/TextColor_Black" />
+</RelativeLayout>

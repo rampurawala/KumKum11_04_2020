@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+      <!-- <domain includeSubdomains="true">webapi.vayuna.com</domain>-->
+        <domain includeSubdomains="true">webapi.vayuna.com</domain>
+        <domain includeSubdomains="true">webapi.macademic.in</domain>
+        <domain includeSubdomains="true">testwebapi.vayuna.com</domain>
+        <domain includeSubdomains="true">testwebapi.macademic.in</domain>
+        <domain includeSubdomains="true">testapp.vayuna.com</domain>
+        <domain includeSubdomains="true">testapp.macademic.in</domain>
+        <domain includeSubdomains="true">vayuna.com</domain>
+        <domain includeSubdomains="true">macademic.in</domain>
+        <domain includeSubdomains="true">gpsv1.msbtrack.com</domain>
+        <domain includeSubdomains="true">s3.ap-south-1.amazonaws.com</domain>
+        <domain includeSubdomains="true">app.vayuna.com</domain>
+        <domain includeSubdomains="true">app.macademic.in</domain>
+        <domain includeSubdomains="true">web.macademic.in</domain>
+        <domain includeSubdomains="true">web.vayuna.com</domain>
+        <domain includeSubdomains="true">visitor.macademicsolutions.com</domain>
+        <domain includeSubdomains="true">docs.google.com</domain>
+    </domain-config>
+</network-security-config>

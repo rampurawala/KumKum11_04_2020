@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_divider"
+    android:orientation="vertical">
+
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@+id/txtFood"
+            android:gravity="center|start"
+            android:text="Day"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/txt_size_sixteen"
+            android:textStyle="bold"
+            app:layout_widthPercent="40%" />
+
+        <TextView
+            android:id="@+id/txtFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:gravity="center|start"
+            android:text="Food"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/txt_size_sixteen"
+            android:textStyle="bold"
+            app:layout_widthPercent="60%" />
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/list_divider" />
+</LinearLayout>

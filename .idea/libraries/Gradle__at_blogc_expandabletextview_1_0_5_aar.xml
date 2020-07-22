@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: at.blogc:expandabletextview:1.0.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de6076b864a91cd0ec10b63d92558577/jetified-expandabletextview-1.0.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de6076b864a91cd0ec10b63d92558577/jetified-expandabletextview-1.0.5/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.blogc/expandabletextview/1.0.5/472e86031a7c4e2fe42a9edff255780d48317e44/expandabletextview-1.0.5-javadoc.jar!/" />
+    </JAVADOC>
+    <LIBRARY_FILE />
+    <LIBRARY_FILE />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/at.blogc/expandabletextview/1.0.5/a6365348ac744f4341b89f415917796b9a3e2a65/expandabletextview-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

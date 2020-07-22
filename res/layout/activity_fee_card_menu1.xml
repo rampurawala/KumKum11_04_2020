@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.expedite.apps.kumkum.activity.FeeCardMenuActivity">
+
+    <ListView
+        android:id="@+id/lstfeecardmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvmarkqueetextfeecardmenu"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.65"
+        android:cacheColorHint="@color/White"
+        android:choiceMode="singleChoice"
+        android:textColor="@color/White"></ListView>
+
+    <TextView
+        android:id="@+id/tvmarkqueetextfeecardmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Last Updated Time:31 Juanuary"
+        android:textColor="@color/TextColor_Black" />
+
+</RelativeLayout>

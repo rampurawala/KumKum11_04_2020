@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.expedite.apps.kumkum"
+    android:versionCode="4"
+    android:versionName="1.3">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <!-- //test -->
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.expedite.apps.kumkum.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.mca.apps.anandniketan.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true"></supports-screens>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:icon="@mipmap/vayuna"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDzWmv2ZNF4AE-UOPWNjzUoYFdrdIAEV-8" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.expedite.apps.kumkum.FileExplore"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.expedite.apps.kumkum.activity_welcome"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.expedite.apps.kumkum.ListActivity"
+            android:label="@string/title_activity_list"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.AccountListAdapter"
+            android:label="@string/title_activity_item_list"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.SplashScreen"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.ChangePinActivity"
+            android:label="@string/title_activity_register_mobile"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.StudentInformationActivity"
+            android:label="@string/title_activity_stud_info"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.StudentInformationAdapter"
+            android:label="@string/title_activity_stud_info_item"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Exams"
+            android:label="@string/title_activity_exams_item"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.ExamItemsAdapter"
+            android:label="@string/title_activity_exams_item"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Settings"
+            android:label="@string/title_activity_settings"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.SettingsItemAdapter"
+            android:label="@string/title_activity_settings_item"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.ProfileActivity"
+            android:label="@string/title_activity_view_profile"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.StudentResultActvity"
+            android:label="@string/title_activity_view_result"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Years"
+            android:label="@string/title_activity_years"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.YearsItemAdapter"
+            android:label="@string/title_activity_years_item"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.PhotoOptions"
+            android:label="@string/title_activity_photo_options"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.PhotoOptionAdapter"
+            android:label="@string/title_activity_photo_option_itm"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.UseCam"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_use_cam"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.UseGallery"
+            android:label="@string/title_activity_use_gallery"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.mca.apps.anandniketan" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.expedite.apps.kumkum.GCMIntentService" />
+
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.StudentListActivity"
+            android:label="@string/title_activity_student_list"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.MessagesListAdapter"
+            android:label="@string/title_activity_messages_item_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.MessagesMonthListActivity"
+            android:label="@string/title_activity_messages_monthlist"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.MessagesSelectedMonthActivity"
+            android:label="@string/title_activity_messages_selected_month"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SingleMessageActivity"
+            android:label="@string/title_activity_view_single_message"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.TwoItemListAdapter"
+            android:label="@string/title_activity_two_item_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.ExamListActivity"
+            android:label="@string/title_activity_exam_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SchoolMatesListActivity"
+            android:label="@string/title_activity_view_profile_scool_mates"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.ExamListMarksheetActivity"
+            android:label="@string/title_activity_exam_list_marksheet"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.MarksheetResultActivity"
+            android:label="@string/title_activity_view_marksheet_result"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.ProfileListAdapter"
+            android:label="@string/title_activity_profile_listrow"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.ExamItemListAdapter"
+            android:label="@string/title_activity_exam_itemlist"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.StudentAttendanceViewActivity"
+            android:label="@string/title_activity_stud_view_attendance"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.AddAccountActivity"
+            android:label="@string/title_activity_add_account"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.AccountListActivity"
+            android:label="@string/title_activity_account_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.AccountListRemoveActivity"
+            android:label="@string/title_activity_account_list_remove"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.RedirectActivity"
+            android:label="@string/title_activity_redirect"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.NoticeActivity"
+            android:label="@string/title_activity_notice"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.NotBoardActivity"
+            android:label="@string/title_activity_not_board"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.StudentCircularActivity"
+            android:label="@string/title_activity_view_student_circular"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.AcademicYearActivity"
+            android:label="@string/title_activity_academic_year"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.FeeCardActivity"
+            android:label="@string/title_activity_fee_card1"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.FeesItemsListAdapter"
+            android:label="@string/title_activity_fee_item_list_activity1"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.FeesItemsAdapter"
+            android:label="@string/title_activity_fee_item1"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.PhotoGalleryActivity"
+            android:label="@string/title_activity_photo_gallery"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SingleImageActivity"
+            android:label="@string/title_activity_sinle_image"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.PhotoGallaryListAdapter"
+            android:label="@string/title_activity_list_view_adapter"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.SubjectWiseHWAdapter"
+            android:label="@string/title_activity_subject_wise_hw"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.SubJectWiseHWNTDNAdapter"
+            android:label="@string/title_activity_sub_ject_wise_hwntdn"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SubjectWiseHWNotificationActivity"
+            android:label="@string/title_activity_subject_wise_hwnotification"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SubjectWiseHWNTDNNotificationActivity"
+            android:label="@string/title_activity_subject_wise_hwntdnnotification"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SubjectWiseHWDetailsActivity"
+            android:label="@string/title_activity_subject_wise_hwdetails"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SubJectWiseHWNTDNDetailsActivity"
+            android:label="@string/title_activity_sub_ject_wise_hwntdndetails"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.HomeMenuExpandableListAdapter"
+            android:label="@string/title_activity_expandable__list_adapter"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.LessionMessageListOldAdapter"
+            android:label="@string/title_activity_lession_message_item_list_new"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.MessagesExpandableListActivity"
+            android:label="@string/title_activity_messages_list_expandable"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.MessageExpandableAdapter"
+            android:label="@string/title_activity_listview"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.DailyDiaryCalanderActivity"
+            android:label="@string/title_activity_daily_diary__calander"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.CalanderItemAdapter"
+            android:label="@string/title_activity_calander_item"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.AttandanceListAdapter"
+            android:label="@string/title_activity_item_list_activity_attandance"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.MessageListForMonthsAdapter"
+            android:label="@string/title_activity_message_item_list_for_months"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.DailyDiaryMonthListAdapter"
+            android:label="@string/title_activity_dailydiary_month_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SingleMessageNotificationActivity"
+            android:label="@string/title_activity_view_single__message__notification"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.NoticeBoardListAdapter"
+            android:label="@string/title_activity_item_noticeboard"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.NoticeBoardActivity"
+            android:label="@string/title_activity_noticeboard"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.adapter.SpinnerItemsAdapter"
+            android:label="@string/title_activity_item_list_for_spinner"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.RegisterGcmActivity"
+            android:label="@string/title_activity_register_gcm"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.ReportBugActivity"
+            android:label="@string/title_activity_report_bug"
+            android:windowSoftInputMode="stateVisible|adjustPan"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SuccessfullyActivity"
+            android:label="@string/title_activity_successfull"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.UseMemory"
+            android:label="@string/title_activity_use_memory"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.CreatePin"
+            android:label="@string/title_activity_create_pin"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.CreatePinMultiUser"
+            android:label="@string/title_activity_create_pin_multi_user"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.MultiUserList"
+            android:label="@string/title_activity_multi_user_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.MainPage"
+            android:label="@string/title_activity_main_page"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.SchoolMatesList"
+            android:label="@string/title_activity_school_mates_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.MessagesListActivity"
+            android:label="@string/title_activity_messages_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Attendance"
+            android:label="@string/title_activity_attendance"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.AttendanceItem"
+            android:label="@string/title_activity_attendance_item"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.AttendanceYears"
+            android:label="@string/title_activity_attendance_years"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.ViewAttendance"
+            android:label="@string/title_activity_view_attendance"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.StudentDetailsRowActivity"
+            android:label="@string/title_activity_messages_list_view_row"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.ExamandMarksheet"
+            android:label="@string/title_activity_examand_marksheet"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.NoRecordsFound"
+            android:label="@string/title_activity_no_records_found"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Attendancemonth"
+            android:label="@string/title_activity_attendancemonth"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Addphotos"
+            android:label="@string/title_activity_addphotos"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.AttendanceMonthlist"
+            android:label="@string/title_activity_attendance_monthlist"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.AnotherActivity"
+            android:label="@string/title_activity_another"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.LessonDiary"
+            android:label="@string/title_activity_lesson_dairy"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.HomeWork"
+            android:label="@string/title_activity_home_work"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.HomeWorkNotDone"
+            android:label="@string/title_activity_home_work_not_done"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.LessonDiaryMessageActivity"
+            android:label="@string/title_activity_lesson_dairy_message"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.LessonDairyMessageItemList"
+            android:label="@string/title_activity_lesson_dairy_message_item_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.LessonMessageMonthlistActivity"
+            android:label="@string/title_activity_lesson_message_monthlist"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.LessonMessageSelectedMonthActivity"
+            android:label="@string/title_activity_lesson_message_selected_month"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.HomePage"
+            android:label="@string/title_activity_home_page"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.schoolSpecific.PhotoGallery"
+            android:label="@string/title_activity_photo_gallery"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.schoolSpecific.Locatus"
+            android:label="@string/title_activity_locatus"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.schoolSpecific.SchoolProfile"
+            android:label="@string/title_activity_school_profile"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.schoolSpecific.Presentation"
+            android:label="@string/title_activity_presentation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.schoolSpecific.Facilities"
+            android:label="@string/title_activity_facilities"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.schoolSpecific.WhyKumKum"
+            android:label="@string/title_activity_why_kum_kum"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.schoolSpecific.ThoughtOfTheDay"
+            android:label="@string/title_activity_thought_of_the_day"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.LessonNotification"
+            android:label="@string/title_activity_lesson_notification"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Circular"
+            android:label="@string/title_activity_circular"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.Feecard"
+            android:label="@string/title_activity_feecard"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.FeeItemListActivity"
+            android:label="@string/title_activity_fee_item_list"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.FeeCard"
+            android:label="@string/title_activity_fee_card"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.FeeCardMenu"
+            android:label="@string/title_activity_fee_card_menu"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.FeeItem"
+            android:label="@string/title_activity_fee_item"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.FeeCardMenuActivity"
+            android:label="@string/title_activity_fee_card_menu1"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.PhotoItemActivity"
+            android:label="@string/title_activity_photoitem"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.PhotoGallerySettings"
+            android:label="@string/title_activity_photo_gallery_settings"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.VechicleLocationActivity"
+            android:label="@string/activity_vechicle_location"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.VehicleInformationActivity"
+            android:label="@string/activity_vehicle_information"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.SingleHomeWorkMessageActivity"
+            android:label="@string/title_activity_single__hw__message"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.expedite.apps.kumkum.activity.DashboardActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="android.app.ExpandableListActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ExpandableListActivity" />
+        </activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Attandance_graph"
+            android:label="@string/title_activity_attandance_graph"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.expedite.apps.kumkum.Dashboard_new"
+            android:label="@string/title_activity_dashboard_new"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+    <meta-data
+        android:name="com.google.android.gms.analytics.globalConfigResource"
+        android:resource="@xml/global_tracker" />
+
+</manifest>

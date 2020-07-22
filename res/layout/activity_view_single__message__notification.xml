@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <TextView
+        android:id="@+id/txtotherdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="gkk"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/txt_size_eighteen" />
+
+    <TextView
+        android:id="@+id/txtsinglemessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtotherdetails"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:text=""
+        android:textColor="@color/textbg"
+        android:textSize="@dimen/txt_size_sixteen" />
+
+    <TextView
+        android:id="@+id/tvmarkqueetextsiglemessage"
+        android:layout_width="300dp"
+        android:layout_height="21dp"
+        android:layout_above="@+id/btn_viewotherMsg"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Last Updated Time:31 Juanuary"
+        android:textColor="@color/textbg"
+        android:textSize="@dimen/txt_size_sixteen"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_viewotherMsg"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:text="View Other"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

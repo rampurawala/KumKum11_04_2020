@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#CEF6F5</color>
+    <color name="colorPrimaryDark">#00a86b</color>
+    <color name="Red">#FF0000</color>
+    <color name="Button_Back_Color">#F59B72</color>
+    <color name="Button_Text_Color">#ffffff</color>
+    <color name="Black">#000000</color>
+    <color name="orange">#F37124</color>
+    <color name="month_button">#F37124</color>
+    <color name="dashboardtext">#800000</color>
+    <color name="winback">#fff</color>
+    <color name="green">#009C58</color>
+    <!-- <color name="winback">#cf0c0e</color> -->
+    <color name="winbacknil">#fff</color>
+    <!-- <color name="winbacknil">#d4cfc9</color> -->
+    <!-- old <color name="winbacknil">#B21E04</color> -->
+    <color name="White">#FFFFFF</color>
+    <color name="Background_White">#ffffff</color>
+    <color name="TextColor_Black">#000</color>
+    <color name="year">#D34332</color>
+    <color name="Marquetextcolor">#fff</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#fff</color>
+    <!-- <color name="list_background">#303030</color> -->
+    <!-- <color name="list_background_pressed">#992416</color> -->
+    <color name="list_background_pressed">#fff</color>
+    <!-- <color name="list_divider">#272727</color> -->
+    <color name="list_divider">#CCCCCC</color>
+    <color name="list_divider_light">#E4E2E2</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="Marron">#B40404</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="Login_button_color">#f88119</color>
+    <color name="colorappname">#ffffff</color>
+    <color name="colorPrimaryDarkNew">#0c6258</color>
+    <color name="SecondaryText">#727272</color>
+    <color name="input_summary">#e5e5e5</color>
+    <color name="Background_color">#fff</color>
+    <!-- <color name="Login_back_color">#d4cfc9</color> -->
+    <color name="Login_back_color">#fff</color>
+    <color name="genre">#666666</color>
+    <color name="aquamarine">#98dbc6</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="list_text_color">#000</color>
+    <color name="fee_paid_green">#48FF5D</color>
+    <color name="header_gray">#777777</color>
+    <color name="bolgque">#0d0d0d</color>
+    <color name="material_blk_lgt">#37474F</color>
+    <color name="bgLight">#f9f9f9</color>
+    <color name="Auther">#03a65a</color>
+    <color name="white">#fff</color>
+    <color name="transparent">#00000000</color>
+    <color name="bluelight">#49acd5</color>
+    <!-- for calander -->
+    <color name="symptom_color_selected">#003366</color>
+    <color name="reaction_color_selected">#003366</color>
+    <color name="static_text_color">#003366</color>
+    <color name="journal_entry_listitem_text_color">#003366</color>
+    <color name="note_text_disabled">#333333</color>
+    <color name="blue">#0000FF</color>
+    <color name="navy">#6699FF</color>
+    <color name="sky">#0099CC</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray">#e7e7e7</color>
+    <color name="lightgray02">#bfbfbf</color>
+    <color name="dark">#000015</color>
+    <color name="lightgreen">#336666</color>
+    <color name="orrange">#e33d1b</color>
+    <color name="darkorrange">#cc2303</color>
+    <color name="orange_calander_day">#FF8000</color>
+    <color name="image_border_start">#40990000</color>
+    <color name="image_border_end">#FF660000</color>
+    <color name="image_border_center">#FFFF3333</color>
+    <color name="default_back_color">#FFFFFF</color>
+    <color name="paymentred">#c81f1f</color>
+
+    <!--Jaydeep-->
+    <color name="main_bg">#fafafa</color><!--#f0f0f0-->
+    <color name="textbg">#757575</color>
+    <color name="headertextbg">#3a3a3a</color>
+    <color name="viewname">#757575</color>
+    <color name="divider_bg">#e5e5e5</color>
+
+    <!--#757575-->
+
+    <!--<color name="colorPrimarybg">#00BBD3</color>-->
+    <!--<color name="colorPrimaryDarkbg">#00aec2</color>-->
+    <color name="colorPrimary">#0187D0</color>
+    <color name="colorPrimarybg">#757575</color>
+    <color name="colorPrimaryDarkbg">#005699</color>
+    <!--#00BAF7-->
+
+    <!--#0095C4 done-->
+
+    <!--<color name="btnmorebg">#00a86b</color>-->
+    <color name="btnmorebgHover">#2ed193</color>
+    <!--<color name="homeworkbg">#00BBD3</color>-->
+    <!--<color name="attendancebg">#FFB300</color>-->
+    <color name="homeworkbg">#F4D35E</color>
+    <color name="attendancebg">#F95738</color>
+    <color name="btnmorebg">#e5e5e5</color>
+    <color name="btnmorebglogin">#f58860</color>
+    <color name="material_red">#ff8a80</color>
+    <color name="material_red_red">#FFCCBC</color>
+    <!--#f58860-->
+    <color name="icon_bg">#0187D0</color>
+    <color name="colorshadow">#050505</color>
+    <color name="viewmorbcg">#e5e5e5</color>
+    <color name="calendar_bg">#cbcfc9</color>
+    <!--<color name="calendar_bg">#174d82</color>-->
+
+    <color name="calendar_homwwork_bg">#F1C40F</color>
+    <color name="calendar_homwwork_bg1">#D2AA55</color>
+
+    <color name="menu_icon_color">#AAAAAA</color>
+    <color name="txt_red_bg">#ff0000</color>
+    <color name="txt_green_bg">#006600</color>
+    <color name="header_bg">#0187D0</color>
+    <color name="header_bg1">#ABBEEE</color>
+    <color name="greenshade">#A6AAAAAA</color>
+    <color name="grayshade">#40AAAAAA</color>
+    <color name="colorevent">#FFCE7A</color>
+    <color name="LightGreen">#62C203</color>
+    <color name="materialLightGreen">#E8F5E9</color>
+
+
+    <color name="material_red1">#FF9E80</color>
+    <color name="material_violet">#EDE7F6</color>
+    <color name="material_green1">#D4E157</color>
+    <color name="material_greendiff">#E6EE9C</color>
+    <color name="material_green">#CCFF90</color>
+    <color name="material_skin">#FFECB3</color>
+
+
+</resources>

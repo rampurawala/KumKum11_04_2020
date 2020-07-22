@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg">
+    <LinearLayout
+        android:id="@+id/ll_MainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/UpdateInfo"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgbullet"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:overScrollMode="never" />
+
+        <ListView
+            android:id="@+id/lstmessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:cacheColorHint="@color/White"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/UpdateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnUpdateProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="5dp"
+        android:text="To get the latest update please click"
+        android:textColor="@color/Black"
+        android:textSize="13dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnUpdateProfile"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/tvmarkqueetextschoolmatesprofile"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:text="Update"
+        android:textColor="#FFFFFF"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvmarkqueetextschoolmatesprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/advertiseView"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Last Updated Time:31 Juanuary"
+        android:textColor="@color/textbg"
+        android:textSize="@dimen/txt_size_forteen"
+        android:singleLine="true" />
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <TextView
+        android:id="@+id/txthwdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="HomeWork"
+        android:textColor="@color/textbg"
+        android:textSize="@dimen/txt_size_sixteen" />
+
+    <ListView
+        android:id="@+id/lsthomework"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txthwdate"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:choiceMode="none"
+        android:clickable="false"
+        android:autoLink="web"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="3dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hapticFeedbackEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+</RelativeLayout>

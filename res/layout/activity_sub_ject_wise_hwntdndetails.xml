@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txthwntdndate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/textbg"
+        android:textSize="@dimen/txt_size_sixteen" />
+
+    <ListView
+        android:id="@+id/lsthwntdn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txthwntdndate"
+        android:layout_margin="10dp"
+        android:cacheColorHint="@color/White"
+        android:textColor="@color/TextColor_Black" />
+
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_above="@+id/advertiseView"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/llMainSurveyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:cardCornerRadius="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/PollTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:layout_toStartOf="@+id/BtnClosed"
+                            android:text=""
+                            android:textColor="@color/textbg"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/BtnClosed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/app_name"
+                            app:srcCompat="@drawable/close_circle_outline" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/PollDescriprion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text=""
+                        android:textColor="@color/textbg"
+                        android:textSize="@dimen/txt_size_sixteen"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imgServey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/BtnSkipAll"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/BtnOk"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="OK"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_size_sixteen"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/BtnSkip"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="Skip"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/txt_size_sixteen"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/BtnSkipAll"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Skip All"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/txt_size_sixteen"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

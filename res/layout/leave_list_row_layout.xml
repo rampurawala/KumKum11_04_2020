@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:id="@+id/ll_DataView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/header_bg"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtApplicationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/btnDownload"
+                android:layout_toStartOf="@+id/btnDownload"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_forteen" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/class_division_bg"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/download_arrow"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtEmployeeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_forteen"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/txtLeaveTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/txtNoOfDays"
+                    android:layout_toStartOf="@+id/txtNoOfDays"
+                    android:text=""
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_forteen" />
+
+                <TextView
+                    android:id="@+id/txtNoOfDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_size_forteen" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtLeaveType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_forteen" />
+
+            <RelativeLayout
+                android:id="@+id/rlMainReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <!--<TextView-->
+                <!--android:id="@+id/txtLeaveReason"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_toLeftOf="@+id/btnMoreReason"-->
+                <!--android:layout_toStartOf="@+id/btnMoreReason"-->
+                <!--android:ellipsize="end"-->
+                <!--android:singleLine="true"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/textbg"-->
+                <!--android:textSize="@dimen/txt_size_forteen" />-->
+
+                <at.blogc.android.views.ExpandableTextView
+                    android:id="@+id/txtLeaveReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/btnMoreReason"
+                    android:layout_toStartOf="@+id/btnMoreReason"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_forteen"
+                    app:animation_duration="750" />
+
+
+                <TextView
+                    android:id="@+id/btnMoreReason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="View More"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_size_twelve" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/divider_bg" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_size_forteen"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtApprovedBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_size_forteen"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlMainManagerRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <!--<TextView-->
+                <!--android:id="@+id/txtManagerRemark"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_toLeftOf="@+id/btnMoreRemarkManager"-->
+                <!--android:layout_toStartOf="@+id/btnMoreRemarkManager"-->
+                <!--android:ellipsize="end"-->
+                <!--android:singleLine="true"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/textbg"-->
+                <!--android:textSize="@dimen/txt_size_forteen" />-->
+
+                <at.blogc.android.views.ExpandableTextView
+                    android:id="@+id/txtManagerRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/btnMoreRemarkManager"
+                    android:layout_toStartOf="@+id/btnMoreRemarkManager"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_forteen"
+                    app:animation_duration="750" />
+
+                <TextView
+                    android:id="@+id/btnMoreRemarkManager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="View More"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_size_twelve" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMainCoordinateRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <!--<TextView-->
+                <!--android:id="@+id/txtCoordinateRemark"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_toLeftOf="@+id/btnMoreRemarkCoordinate"-->
+                <!--android:layout_toStartOf="@+id/btnMoreRemarkCoordinate"-->
+                <!--android:ellipsize="end"-->
+                <!--android:singleLine="true"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/textbg"-->
+                <!--android:textSize="@dimen/txt_size_forteen" />-->
+
+                <at.blogc.android.views.ExpandableTextView
+                    android:id="@+id/txtCoordinateRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/btnMoreRemarkCoordinate"
+                    android:layout_toStartOf="@+id/btnMoreRemarkCoordinate"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_forteen"
+                    app:animation_duration="750" />
+
+                <TextView
+                    android:id="@+id/btnMoreRemarkCoordinate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="View More"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_size_twelve" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llMain_BottomView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edtRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your Remark"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/textbg"
+                    android:textSize="@dimen/txt_size_forteen" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end">
+
+                    <TextView
+                        android:id="@+id/btnApproved"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/btnReject"
+                        android:layout_toStartOf="@+id/btnReject"
+                        android:background="@color/list_divider"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Approve"
+                        android:textColor="@color/txt_green_bg"
+                        android:textSize="@dimen/txt_size_forteen" />
+
+                    <TextView
+                        android:id="@+id/btnReject"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/list_divider"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Reject"
+                        android:textColor="@color/txt_red_bg"
+                        android:textSize="@dimen/txt_size_forteen" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

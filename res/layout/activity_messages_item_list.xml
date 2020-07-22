@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       app:cardCornerRadius="2dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtmessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/imgMore"
+                android:layout_toStartOf="@+id/imgMore"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2.3dp"
+                android:autoLink="web"
+                android:maxLines="4"
+                android:text=""
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_sixteen" />
+
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/right_arrow"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txtmessagesdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/txtmessages"
+                android:layout_marginTop="15dp"
+                android:text=""
+                android:textColor="@color/textbg"
+                android:textSize="@dimen/txt_size_twelve" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

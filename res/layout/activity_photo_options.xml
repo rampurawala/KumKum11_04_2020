@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutlenear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhotoOptions" >
+
+    <ListView
+        android:id="@+id/lstMultiUserList"
+        android:layout_width="match_parent"
+        android:background="@color/White"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvmarkqueetextphotooptions">
+    </ListView>
+    
+    <TextView
+        android:id="@+id/tvmarkqueetextphotooptions"
+        android:layout_width="300dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="Last Updated Time:31 Juanuary" />
+
+</RelativeLayout>

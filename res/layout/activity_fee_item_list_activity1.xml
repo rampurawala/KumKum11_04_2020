@@ -1,0 +1,44 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    tools:ignore="MergeRootFrame" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtFee1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cell_shape"
+            android:gravity="left"
+            android:paddingLeft="2dp"
+            android:text="10,Aug-15"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txtFee2"
+            android:layout_width="168dp"
+             android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Fee name"
+            android:background="@drawable/cell_shape"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/txtFee3"
+            android:layout_width="42dp"
+             android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="1000"
+            android:background="@drawable/cell_shape"
+            android:paddingRight="18dp"
+            android:textSize="14dp" />
+
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/advertiseLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/btnLeft"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center|start"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        app:srcCompat="@drawable/left_arrow" />
+
+    <View
+        android:id="@+id/btnRight"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center|end"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:srcCompat="@drawable/right_arrow" />
+
+
+
+</FrameLayout>
+    <include
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:id="@+id/advertiseLayout"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

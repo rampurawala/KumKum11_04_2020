@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+    android:background="@color/viewmorbcg"
+android:layout_height="match_parent"
+tools:context=".activity.CurriculumTextFileActivity">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="2dp"
+        android:layout_above="@+id/advertiseView"
+        android:layout_height="match_parent">
+        <TextView
+            android:text=""
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/curriculumText"
+            android:lineSpacingExtra="1dp"
+            android:lineSpacingMultiplier="1.2"
+            android:scrollbars="vertical"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/advertiseView"
+        layout="@layout/advertise_banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

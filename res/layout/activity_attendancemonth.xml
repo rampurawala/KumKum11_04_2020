@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutlenear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Attendancemonth" >
+
+    <ListView
+        android:id="@+id/lstabout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.54"
+        android:layout_above="@+id/tvmarkqueetextattendancemonhwise"
+        android:cacheColorHint="@color/winbacknil"
+        android:layout_marginBottom="5dp"
+        android:choiceMode="singleChoice">
+    </ListView>
+    
+    <TextView
+        android:id="@+id/tvmarkqueetextattendancemonhwise"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_gravity="center"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+android:layout_alignParentBottom="true"
+        android:text="Last Updated Time:31 Juanuary" />
+
+</RelativeLayout>
